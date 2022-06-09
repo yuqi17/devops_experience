@@ -14,4 +14,5 @@
 test "start loop"
 echo "the return value of the function is $?"
 ```
+需要给脚本加执行权限才能运行: ```chmod u+x *. sh```
 shell 脚本可以直接通过命令行做很多事情,程序的底层说是一个个的脚本进程也不为过,只是脚本命令可以直接就用,而程序需要编写.shell 脚本主要用在部分开发,黑客,运维相关的地方.
