@@ -16,7 +16,7 @@ openssl req -new -key privatekey.pem -out certrequest.csr
 openssl x509 -req -in certrequest.csr -signkey privatekey.pem -out certificate.pem
 ```
 
-- 4. 拷贝 privatekey.pem  和 certificate.pem
+- 4. 拷贝 privatekey.pem  和 certificate.pem 到项目跟目录下的key 文件夹中, 这两个一个是证书私钥, 一个是自签名证书
 
 - 5. 个人比较喜欢新的东西, 也爱偷懒, 于是用koa2 和 koa2 的脚手架, 安装之前先设置一下
 
