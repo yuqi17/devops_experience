@@ -1,17 +1,23 @@
 [步骤参考](https://blog.csdn.net/weixin_38946164/article/details/107981042)
 在windows 上我用的git 的bash 才能正常使用 openssl 命令, 创建并cd到定目录下,依次运行命令就可以获得三个文件: privatekey.pem, certrequest.csr, certificate.pem
 
-- 1.
+- 1. 生成私钥
 ```bash
  openssl genrsa -out privatekey.pem 1024
 ```
 
-- 2.
+- 2. 由私钥生成证书请求文件
+
+```
+CSR是Certificate Signing Request的英文缩写，即证书请求文件，也就是证书申请者在申请数字证书时由CSP(加密服务提供者)在生成私钥的同时也生成证书请求文件，
+证书申请者只要把CSR文件提交给证书颁发机构后，证书颁发机构使用其根证书私钥签名就生成了证书公钥文件，也就是颁发给用户的证书。
+```
+
 ```bash
 openssl req -new -key privatekey.pem -out certrequest.csr
 ```
 
-- 3.
+- 3. 由证书请求文件和私钥生成证书
 ```bash
 openssl x509 -req -in certrequest.csr -signkey privatekey.pem -out certificate.pem
 ```
