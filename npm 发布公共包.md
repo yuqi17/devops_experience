@@ -14,3 +14,6 @@
 abcde42310
 github oauth 已经绑定
 ]
+
+为了给npm 加一个自定义的头像还注册了一个 worldpress 然后用它注册 Gravatar 上传头像
+worldpress: 1...163.com y-4
